@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hardik Khanduja | MERN Stack Developer</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/name-logo.1.svg" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="fonts.css" />
+  </head>
+  <body class="bg-[#111] text-white">
+    <!-- Full Page Particle Canvas -->
+    <canvas id="particles-canvas" class="fixed inset-0 z-0" style="pointer-events: none;"></canvas>
+
+    <!-- Connect icons - fixed extreme right -->
+    <aside class="connect-bar" aria-label="Connect">
+      <a href="tel:+919988604013" class="connect-icon" aria-label="Phone" title="Phone">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-6 h-6" fill="currentColor"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+      </a>
+      <a href="https://wa.me/919988604013" target="_blank" rel="noopener" class="connect-icon" aria-label="WhatsApp" title="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/hardik-khanduja-60a9a6287" target="_blank" rel="noopener" class="connect-icon" aria-label="LinkedIn" title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6" fill="currentColor"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
+      </a>
+      <a href="https://x.com/HardikKhanduja" target="_blank" rel="noopener" class="connect-icon" aria-label="X" title="X">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6" fill="currentColor"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+      </a>
+      <a href="https://github.com/Hardikkhanduja" target="_blank" rel="noopener" class="connect-icon" aria-label="GitHub" title="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-6 h-6" fill="currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/hardik_khanduja/" target="_blank" rel="noopener" class="connect-icon" aria-label="Instagram" title="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+      <a href="mailto:khanduja.hardik001@gmail.com" class="connect-icon" aria-label="Email" title="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6" fill="currentColor"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+      </a>
+    </aside>
+
+    <!-- Minimal Floating Navbar -->
+    <nav id="floating-navbar" class="floating-navbar fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-end">
+        <div class="nav-links hidden md:flex items-center gap-1">
+          <a href="#" id="nav-about-btn" class="nav-link">About</a>
+          <span class="nav-separator">|</span>
+          <a href="#works" class="nav-link">Latest Works</a>
+          <span class="nav-separator">|</span>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg relative overflow-hidden">
+      <div class="hero-inner relative w-full max-w-[900px] mx-auto px-6 md:px-10 z-10">
+        <!-- Hero content -->
+        <div class="hero-content relative text-center">
+          <h1 class="text-4xl md:text-6xl lg:text-[80px] font-bold mb-6 leading-tight hero-name">
+            <span class="block text-white">Hardik</span>
+            <span class="block text-violet-400">Khanduja</span>
+          </h1>
+          <p id="typing-text" class="text-lg font-light mb-12 mx-auto leading-relaxed min-h-[4rem] max-w-[50rem] px-4 tagline-text">
+            <span class="typing-cursor">|</span>
+          </p>
+          <div id="hero-buttons" class="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0 mt-8">
+            <button id="about-me-btn" class="btn-primary px-8 py-3.5 rounded-xl text-white font-medium transition-all duration-300 hover:scale-105 ripple-btn">
+              About Me
+            </button>
+            <a href="#works" class="view-work-btn text-accent-link hover:text-white transition-all duration-300 px-8 py-3.5 border border-white/20 rounded-xl hover:border-violet-500/40 inline-flex items-center gap-2 hover:scale-105">
+              View My Work
+              <svg class="arrow-icon w-4 h-4 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <svg class="w-6 h-10 text-violet-400" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- About Me Modal -->
+    <div id="about-modal" class="about-modal" aria-hidden="true" role="dialog" aria-labelledby="about-modal-title">
+      <div id="about-modal-backdrop" class="about-modal-backdrop"></div>
+      <div class="about-modal-panel">
+        <button id="about-modal-close" class="about-modal-close" aria-label="Close modal">&times;</button>
+        <h2 id="about-modal-title" class="text-2xl font-bold mb-4 text-white">About Me</h2>
+        <div class="space-y-4 text-gray-300">
+          <p>I’m Hardik Khanduja — a developer driven by curiosity and a constant desire to build things that matter. I enjoy transforming ideas into modern, responsive, and user-focused web experiences that are both functional and visually engaging.</p>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-2">Skills</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">C</span>
+            </div>
+          </div>
+          <p>When I'm not coding, I enjoy exploring new technologies and continuously improving my skills. I believe great development goes beyond logic — it’s about creating smooth, meaningful experiences that users truly enjoy.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Latest Works Section -->
+    <section id="works" class="section-block">
+      <div class="section-inner max-w-6xl mx-auto">
+        <h2 class="section-heading text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+          Latest <span class="text-violet-400">Works</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Work Card 1 -->
+          <div class="work-card bg-[#1a1a1a] rounded-2xl p-6 border border-white/10 hover:border-violet-500/30 transition-all duration-300 group">
+            <div class="aspect-video rounded-xl mb-4 overflow-hidden bg-[#111827]">
+              <img
+                src="assets/images/Passwsord.png"
+                alt="Password Generator interface showing generation modes and strength analysis"
+                class="w-full h-full object-cover transition duration-300 group-hover:scale-[1.02] group-hover:brightness-110"
+              />
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-violet-300 transition-colors">Secure Password Generator</h3>
+            <p class="text-gray-400 text-sm mb-4">A modern password generator with multiple modes, customizable options, real-time strength analysis, and history tracking.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span> 
+            </div>
+            <div class="flex gap-2">
+              <a href="https://password-generator-pi-wine-17.vercel.app" target="_blank" rel="noopener" class="text-violet-400 hover:text-white transition-colors" title="View Live">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                  <path d="M5 5a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2v-2a1 1 0 10-2 0v2H5V7h2a1 1 0 000-2H5z"></path>
+                </svg>
+              </a>
+              <a href="https://github.com/Hardikkhanduja/PasswordGenerator" target="_blank" rel="noopener" class="text-violet-400 hover:text-white transition-colors" title="View Code">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Work Card 2 -->
+          <div class="work-card bg-[#1a1a1a] rounded-2xl p-6 border border-white/10 hover:border-violet-500/30 transition-all duration-300 group">
+            <div class="aspect-video rounded-xl mb-4 overflow-hidden bg-[#111827]">
+              <img
+                src="assets/images/Tasktify.png"
+                alt="Tasktify task management interface with dashboard and task list"
+                class="w-full h-full object-cover transition duration-300 group-hover:scale-[1.02] group-hover:brightness-110"
+              />
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-violet-300 transition-colors">Tasktify - Task Management App</h3>
+            <p class="text-gray-400 text-sm mb-4">A minimal and elegant task management app with intuitive organization and tracking features.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">UI/UX</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="https://tasktify-nine.vercel.app" target="_blank" rel="noopener" class="text-violet-400 hover:text-white transition-colors" title="View Live">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                  <path d="M5 5a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2v-2a1 1 0 10-2 0v2H5V7h2a1 1 0 000-2H5z"></path>
+                </svg>
+              </a>
+              <a href="https://github.com/Hardikkhanduja/Tasktify" target="_blank" rel="noopener" class="text-violet-400 hover:text-white transition-colors" title="View Code">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Work Card 3 -->
+          <div class="work-card bg-[#1a1a1a] rounded-2xl p-6 border border-white/10 hover:border-violet-500/30 transition-all duration-300 group">
+            <div class="aspect-video rounded-xl mb-4 overflow-hidden bg-gradient-to-br from-[#0b1220] via-[#0a1a36] to-[#050912] flex items-center justify-center">
+              <img
+                src="assets/images/react.jpeg"
+                alt="React logo"
+                class="w-full h-full object-contain p-10 transition duration-300 group-hover:scale-[1.02] drop-shadow-[0_0_18px_rgba(97,218,251,0.35)]"
+              />
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-violet-300 transition-colors"> React Learning Journey</h3>
+            <p class="text-gray-400 text-sm mb-4">Exploring React core concepts including components, hooks, and declarative UI through building and experimenting with practical applications</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="project-tag">React</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Learning</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="#" class="text-violet-400 hover:text-white transition-colors" title="View Live">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                  <path d="M5 5a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2v-2a1 1 0 10-2 0v2H5V7h2a1 1 0 000-2H5z"></path>
+                </svg>
+              </a>
+              <a href="https://github.com/Hardikkhanduja/React" target="_blank" rel="noopener" class="text-violet-400 hover:text-white transition-colors" title="View Code">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-[80vh] flex flex-col items-center justify-center px-6 py-20">
+      <div class="section-inner max-w-6xl mx-auto w-full">
+        <h2 class="section-heading text-xl md:text-7xl font-bold text-center mb-12 text-white">
+          Get In <span class="text-violet-400">Touch</span>
+        </h2>
+        <div class="bg-[#1a1a1a] rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto">
+          <p class="text-center text-gray-300 mb-8 text-xl max-w-2xl mx-auto">
+            Ready to bring your ideas to life? Let's discuss your next project.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="mailto:khanduja.hardik001@gmail.com" class="btn-primary px-8 py-3.5 rounded-xl text-white font-medium transition-all duration-300 hover:scale-105 inline-flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+              </svg>
+              Send Email
+            </a>
+            <a href="tel:+919988604013" class="text-violet-300 hover:text-white transition-colors px-8 py-3.5 border border-white/15 rounded-xl hover:border-violet-500/60 inline-flex items-center gap-2 bg-white/0 hover:bg-white/5">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+              </svg>
+              Call Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0d0d0d] border-t border-white/5 py-8">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <p class="text-gray-400 mb-4">
+          &copy; 2026 Hardik Khanduja. All rights reserved.
+        </p>
+        <a href="#" class="to-top-link text-accent-link hover:text-white transition-colors text-sm">
+          Back to Top ↑
+        </a>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+      // Hero animations and effects
+      class HeroEffects {
+        constructor() {
+          this.canvas = document.getElementById('particles-canvas');
+          this.ctx = this.canvas.getContext('2d');
+          this.particles = [];
+          this.mouse = { x: 0, y: 0 };
+          this.init();
+        }
+
+        init() {
+          this.resizeCanvas();
+          this.createParticles();
+          this.setupEventListeners();
+          this.animate();
+          this.startTypingAnimation();
+          this.animateBackground();
+        }
+
+        resizeCanvas() {
+          this.canvas.width = window.innerWidth;
+          this.canvas.height = window.innerHeight;
+        }
+
+        createParticles() {
+          for (let i = 0; i < 25; i++) {
+            this.particles.push({
+              x: Math.random() * this.canvas.width,
+              y: Math.random() * this.canvas.height,
+              vx: (Math.random() - 0.5) * 0.5,
+              vy: (Math.random() - 0.5) * 0.5,
+              size: Math.random() * 3 + 1,
+              opacity: Math.random() * 0.5 + 0.2
+            });
+          }
+        }
+
+        setupEventListeners() {
+          window.addEventListener('resize', () => this.resizeCanvas());
+          window.addEventListener('mousemove', (e) => {
+            this.mouse.x = e.clientX;
+            this.mouse.y = e.clientY;
+          });
+        }
+
+        animate() {
+          this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+          
+          this.particles.forEach(particle => {
+            // Mouse repulsion
+            const dx = this.mouse.x - particle.x;
+            const dy = this.mouse.y - particle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < 100) {
+              particle.x -= dx * 0.01;
+              particle.y -= dy * 0.01;
+            }
+            
+            // Update position
+            particle.x += particle.vx;
+            particle.y += particle.vy;
+            
+            // Bounce off edges
+            if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
+            if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
+            
+            // Draw particle
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            this.ctx.fillStyle = `rgba(99, 102, 241, ${particle.opacity})`;
+            this.ctx.fill();
+          });
+          
+          // Draw connections
+          this.particles.forEach((p1, i) => {
+            this.particles.slice(i + 1).forEach(p2 => {
+              const dx = p1.x - p2.x;
+              const dy = p1.y - p2.y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+              
+              if (distance < 120) {
+                this.ctx.beginPath();
+                this.ctx.moveTo(p1.x, p1.y);
+                this.ctx.lineTo(p2.x, p2.y);
+                this.ctx.strokeStyle = `rgba(139, 92, 246, ${0.2 * (1 - distance / 120)})`;
+                this.ctx.lineWidth = 1;
+                this.ctx.stroke();
+              }
+            });
+          });
+          
+          requestAnimationFrame(() => this.animate());
+        }
+
+        startTypingAnimation() {
+          const text = 'Full-Stack Developer and Patent Publisher crafting cutting-edge web experiences with React, Python, and creative problem-solving';
+          const element = document.getElementById('typing-text');
+          let i = 0;
+          
+          const typeWriter = () => {
+            if (i < text.length) {
+              element.innerHTML = text.substring(0, i + 1) + '<span class="typing-cursor">|</span>';
+              i++;
+              setTimeout(typeWriter, 50);
+            } else {
+              setTimeout(() => {
+                // Remove cursor after typing completes
+                element.innerHTML = text;
+                document.getElementById('hero-buttons').style.opacity = '1';
+                document.getElementById('hero-buttons').style.transform = 'translateY(0)';
+              }, 500);
+            }
+          };
+          
+          setTimeout(typeWriter, 1000);
+        }
+
+        animateBackground() {
+          const body = document.body;
+          let time = 0;
+          
+          setInterval(() => {
+            time += 0.01;
+            const hue1 = 220 + Math.sin(time) * 15;
+            const hue2 = 240 + Math.cos(time * 0.7) * 10;
+            body.style.background = `radial-gradient(ellipse at center, hsl(${hue1}, 70%, 8%) 0%, hsl(${hue2}, 60%, 4%) 50%, #000000 100%)`;
+            body.style.backgroundAttachment = 'fixed';
+          }, 150);
+        }
+      }
+
+      // Initialize when DOM is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        new HeroEffects();
+        
+        // Floating navbar scroll effect
+        const navbar = document.getElementById('floating-navbar');
+        window.addEventListener('scroll', () => {
+          const scrolled = window.pageYOffset;
+          
+          if (scrolled > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          
+          // Scroll indicator fade out
+          const scrollIndicator = document.querySelector('.scroll-indicator');
+          const opacity = Math.max(0, 1 - scrolled / 200);
+          scrollIndicator.style.opacity = opacity;
+        });
+      });
+    </script>
+  </body>
+</html>
