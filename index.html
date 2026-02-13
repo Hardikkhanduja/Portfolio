@@ -7,6 +7,53 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/name-logo.1.svg" />
     <link rel="stylesheet" href="output.css" />
     <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+      .works-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .works-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .works-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .works-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .patent-card {
+        border: 1px solid rgba(255, 215, 0, 0.2);
+      }
+
+      .patent-card:hover {
+        border-color: rgba(255, 215, 0, 0.4);
+        box-shadow: 0 14px 36px rgba(255, 215, 0, 0.18);
+      }
+
+      .patent-cert-icon {
+        font-size: 96px;
+        line-height: 1;
+        background: linear-gradient(135deg, #eacb58 0%, #dca54b 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.22));
+        opacity: 0.9;
+      }
+    </style>
   </head>
   <body class="bg-[#111] text-white">
     <!-- Full Page Particle Canvas -->
@@ -117,7 +164,7 @@
         <h2 class="section-heading text-3xl md:text-4xl font-bold text-center mb-12 text-white">
           Latest <span class="text-violet-400">Works</span>
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="works-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           <!-- Work Card 1 -->
           <div class="work-card bg-[#1a1a1a] rounded-2xl p-6 border border-white/10 hover:border-violet-500/30 transition-all duration-300 group">
             <div class="aspect-video rounded-xl mb-4 overflow-hidden bg-[#111827]">
@@ -209,6 +256,20 @@
                   <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                 </svg>
               </a>
+            </div>
+          </div>
+
+          <!-- Work Card 4 -->
+          <div class="work-card patent-card bg-[#1a1a1a] rounded-2xl p-6 transition-all duration-300 group">
+            <div class="aspect-video rounded-xl mb-4 overflow-hidden relative bg-[radial-gradient(circle_at_center,rgba(51,65,85,0.38)_0%,rgba(17,24,39,0.9)_45%,rgba(0,0,0,1)_100%)] flex items-center justify-center">
+              <i class="fa-solid fa-certificate patent-cert-icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-[#FFE182] transition-colors">Patent Publication</h3>
+            <p class="text-gray-400 text-sm mb-4">Published patent on IoT-based smart monitoring system improving efficiency and reliability. Reimagining elevators with AI, sustainability, and intelligent automation to create faster, safer, and energy-efficient transportation systems.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="project-tag">Research</span>
+              <span class="project-tag">Innovation</span>
+              <span class="project-tag">Patent</span>
             </div>
           </div>
         </div>
