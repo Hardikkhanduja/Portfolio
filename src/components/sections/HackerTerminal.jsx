@@ -25,7 +25,7 @@ export const HackerTerminal = () => {
       </div>
 
       {/* Terminal Body */}
-      <div className="p-6 md:p-8 flex flex-col gap-4 text-secondary/80 text-sm md:text-base">
+      <div className="p-6 md:p-8 flex flex-col gap-4 text-secondary/80 text-sm md:text-base whitespace-normal break-words overflow-hidden">
         <p className="text-primary opacity-50 text-xs">
           Last login: {new Date().toDateString()} on ttys000
         </p>

@@ -61,7 +61,7 @@ function App() {
           <LiveTerminal />
 
           <div className="w-full max-w-7xl mx-auto flex flex-col justify-between min-h-[80vh] relative z-10 pt-24">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12">
+            <div className="flex flex-col justify-between items-start gap-8 mb-12">
               <FadeIn delay={0.3}>
                 <div className="flex items-center gap-3 bg-surface/50 backdrop-blur-md px-4 py-2 rounded-full border border-border">
                   <span className="relative flex h-2.5 w-2.5">
@@ -96,7 +96,7 @@ function App() {
             </div>
 
             {/* Spinning Circular Badge (Desktop Only) */}
-            <div className="hidden md:flex relative shrink-0 w-32 h-32 items-center justify-center mb-6">
+            <div className="hidden lg:flex relative shrink-0 w-32 h-32 items-center justify-center mb-6">
               <div className="absolute inset-0 animate-spin-slow">
                 <svg
                   viewBox="0 0 100 100"
@@ -130,14 +130,14 @@ function App() {
             </h2>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 min-h-[600px]">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 min-h-[600px]">
             {/* Terminal Card */}
-            <div className="md:col-span-3 rounded-[2rem] bg-gradient-to-br from-[#111111] to-[#0a0a0a] border border-border p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+            <div className="lg:col-span-3 rounded-[2rem] bg-gradient-to-br from-[#111111] to-[#0a0a0a] border border-border p-8 md:p-12 shadow-2xl relative overflow-hidden group">
               <HackerTerminal />
             </div>
 
             {/* Micro Cards */}
-            <div className="md:col-span-1 flex flex-col gap-6">
+            <div className="lg:col-span-1 flex flex-col gap-6">
               <FadeIn delay={0.2} className="group">
                 <TiltCard className="h-full rounded-[2rem] bg-surface border border-border p-8 flex flex-col justify-between transition-colors duration-500 hover:border-accent hover:bg-surface-hover">
                   <MapPin className="w-8 h-8 text-secondary group-hover:text-accent transition-colors relative z-20" />
