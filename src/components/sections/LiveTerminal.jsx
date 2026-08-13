@@ -35,7 +35,7 @@ export const LiveTerminal = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.5, duration: 1 }}
-      className="hidden lg:flex flex-col absolute top-32 right-12 w-[350px] bg-surface/50 backdrop-blur-md border border-border rounded-lg overflow-hidden shadow-2xl z-20"
+      className="hidden xl:flex flex-col absolute top-20 right-8 2xl:top-32 2xl:right-12 w-[300px] 2xl:w-[350px] bg-surface/50 backdrop-blur-md border border-border rounded-lg overflow-hidden shadow-2xl z-0"
     >
       {/* Terminal Header */}
       <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-black/20">
